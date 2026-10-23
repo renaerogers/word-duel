@@ -1,0 +1,30 @@
+{
+  "name": "word-duel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "convex": "convex dev",
+    "dictionary": "node scripts/build-dictionary.mjs",
+    "dictionary:import": "convex import --table words --replace -y dictionary/words.jsonl",
+    "dictionary:import:prod": "convex import --prod --table words --replace -y dictionary/words.jsonl",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "convex": "^1.48.0",
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@edge-runtime/vm": "^5.0.0",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "convex-test": "^0.0.64",
+    "typescript": "^5",
+    "vitest": "^5.0.5"
+  }
+}
